@@ -1,0 +1,16 @@
+﻿{
+  "manifest_version": 2,
+  "name": "BlockLowesChatPopup",
+  "description": "Blocks Lowes Chat popup on start.",
+  "version": "1",
+  "author": "John O'Donoghue",
+  "permissions": [ "storage", "webNavigation", "*://*/*" ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.lowes.com/*"],
+      "js": [ "blockchatpopup.js" ],
+      "run_at": "document_end"
+    }
+  ]
+
+}
